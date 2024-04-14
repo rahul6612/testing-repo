@@ -1,0 +1,4177 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+
+<!-- {% for file in files %} -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>XpertWe</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+
+
+<!--   <!-- Vendor CSS Files -->
+  <link href="{% static 'home/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'home/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'home/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'home/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'home/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+
+  <!-- Template Main CSS File -->
+    <link rel="stylesheet" href='{% static "home/css/main.css" %}'>
+    <link rel="stylesheet" href='{% static "home/css/try.scss" %}'> -->
+
+
+
+
+
+
+
+
+
+    <!--      from main static files-->
+      <link rel="stylesheet" href='https://try-marketing.s3.amazonaws.com/static/home/css/main.css'>
+         <link rel="stylesheet" href='https://try-marketing.s3.amazonaws.com/static/home/css/try.scss'>
+      <link href="https://try-marketing.s3.amazonaws.com/static/home/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://try-marketing.s3.amazonaws.com/static/home/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://try-marketing.s3.amazonaws.com/static/home/vendor/aos/aos.css" rel="stylesheet">
+  <link href="https://try-marketing.s3.amazonaws.com/static/home/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://try-marketing.s3.amazonaws.com/static/home/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+  
+
+
+  
+
+  <!-- =======================================================
+  * Template Name: Impact
+  * Updated: Jan 09 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css" integrity="sha512-8RxmFOVaKQe/xtg6lbscU9DU0IRhURWEuiI0tXevv+lXbAHfkpamD4VKFQRto9WgfOJDwOZ74c/s9Yesv3VvIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+<body>
+
+
+
+
+
+<!--  &lt;!&ndash; ======= Header ======= &ndash;&gt;-->
+<!--  <section id="topbar" class="topbar d-flex align-items-center">-->
+<!--    <div class="container d-flex justify-content-center justify-content-md-between">-->
+<!--      <div class="contact-info d-flex align-items-center">-->
+<!--        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">rahul@example.com</a></i>-->
+<!--        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 8248060838</span></i>-->
+<!--      </div>-->
+<!--      <div class="social-links d-none d-md-flex align-items-center">-->
+<!--        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>-->
+<!--        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>-->
+<!--        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>-->
+<!--        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>&lt;!&ndash; End Top Bar &ndash;&gt;-->
+
+<!--  <header id="header" class="header d-flex align-items-center">-->
+
+<!--    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">-->
+<!--      <a href="index.html" class="logo d-flex align-items-center">-->
+<!--        &lt;!&ndash; Uncomment the line below if you also wish to use an image logo &ndash;&gt;-->
+<!--        &lt;!&ndash; <img src="assets/img/logo.png" alt=""> &ndash;&gt;-->
+<!--        <h1>Real Est<span>.</span></h1>-->
+<!--      </a>-->
+<!--      <nav id="navbar" class="navbar">-->
+<!--        <ul>-->
+<!--          <li><a href="#hero">Home</a></li>-->
+<!--          <li><a href="#about">About</a></li>-->
+<!--          <li><a href="#services">Services</a></li>-->
+<!--          <li><a href="#portfolio">Portfolio</a></li>-->
+<!--          <li><a href="#team">Team</a></li>-->
+<!--          <li><a href="blog.html">Blog</a></li>-->
+<!--          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
+<!--            <ul>-->
+<!--              <li><a href="#">Drop Down 1</a></li>-->
+<!--              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
+<!--                <ul>-->
+<!--                  <li><a href="#">Deep Drop Down 1</a></li>-->
+<!--                  <li><a href="#">Deep Drop Down 2</a></li>-->
+<!--                  <li><a href="#">Deep Drop Down 3</a></li>-->
+<!--                  <li><a href="#">Deep Drop Down 4</a></li>-->
+<!--                  <li><a href="#">Deep Drop Down 5</a></li>-->
+<!--                </ul>-->
+<!--              </li>-->
+<!--              <li><a href="#">Drop Down 2</a></li>-->
+<!--              <li><a href="#">Drop Down 3</a></li>-->
+<!--              <li><a href="#">Drop Down 4</a></li>-->
+<!--            </ul>-->
+<!--          </li>-->
+<!--          <li><a href="#contact">Contact</a></li>-->
+<!--        </ul>-->
+<!--      </nav>&lt;!&ndash; .navbar &ndash;&gt;-->
+
+<!--      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>-->
+<!--      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>-->
+
+<!--    </div>-->
+<!--  </header>&lt;!&ndash; End Header &ndash;&gt;-->
+<!--  &lt;!&ndash; End Header &ndash;&gt;-->
+<!--  -->
+
+
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="{% static 'home/vendor/animate.css/animate.css' %}" rel="stylesheet">
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active" style="background-image: url(static/home/img/main-slider1.svg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+<!--                <h2 class="animate__animated animate__fadeInDown"><span>AWESOME</span> LET'S GROW YOUR BUSINESS </h2>-->
+<!--                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. .</p>-->
+                <div>
+<!--                  <a href="#service" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Services</a>-->
+                  <a href="#contact" class="btn-book animate__animated animate__fadeInUp scrollto">Contact Our Experts</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+                      <!-- Slide 2 -->
+          <div class="carousel-item" style="background-image: url(static/home/img/1am.jpg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">WE ARE CREATIVE</h2>
+                <p class="animate__animated animate__fadeInUp">Ut Occaecitecto.</p>
+                <div>
+<!--                  <a href="#service" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Services</a>-->
+                  <a href="#contact" class="btn-book animate__animated animate__fadeInUp scrollto">Contact Our Experts</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Slide 3 -->
+          <div class="carousel-item" style="background-image: url(static/home/img/mac.jpg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Hmm..TAKE A DRINK WE WILL DO YOUR JOB</h2>
+                <p class="animate__animated animate__fadeInUp">Ut velit esdi architecto.</p>
+                <div>
+<!--                  <a href="#service" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Services</a>-->
+                  <a href="#contact" class="btn-book animate__animated animate__fadeInUp scrollto">Contact Our Experts</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+
+
+<style>
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
+@font-face {
+    font-family: "semibold";
+    src: url(Degular-Semibold.otf) format("truetype");
+}
+
+#hero {
+  width: 100%;
+  height: 100vh;
+  /*background-color: rgba(39, 37, 34, 0.8);*/
+  overflow: hidden;
+  padding: 0;
+
+
+}
+
+#hero .carousel-item {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#hero .carousel-item::before {
+  content: "";
+  /*background-color: rgba(12, 11, 10, 0.5);*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#hero .carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .carousel-content {
+  text-align: center;
+}
+
+#hero h2 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: 700;
+  font-family: 'semibold',  Segoe MDL2 Assets;
+
+}
+
+#hero h2 span {
+  color: #ffb03b;
+  font-family: 'semibold',  Segoe MDL2 Assets;
+}
+
+#hero p {
+  width: 80%;
+  animation-delay: 0.4s;
+  margin: 0 auto 30px auto;
+  color: #fff;
+  font-family: 'Open Sans',  Segoe MDL2 Assets;
+
+}
+
+#hero .carousel-inner .carousel-item {
+  transition-property: opacity;
+  background-position: center top;
+}
+
+#hero .carousel-inner .carousel-item,
+#hero .carousel-inner .active.carousel-item-start,
+#hero .carousel-inner .active.carousel-item-end {
+  opacity: 0;
+}
+
+#hero .carousel-inner .active,
+#hero .carousel-inner .carousel-item-next.carousel-item-start,
+#hero .carousel-inner .carousel-item-prev.carousel-item-end {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#hero .carousel-inner .carousel-item-next,
+#hero .carousel-inner .carousel-item-prev,
+#hero .carousel-inner .active.carousel-item-start,
+#hero .carousel-inner .active.carousel-item-end {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+#hero .carousel-control-next-icon,
+#hero .carousel-control-prev-icon {
+  background: none;
+  font-size: 30px;
+  line-height: 0;
+  width: auto;
+  height: auto;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.5);
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero .carousel-control-next-icon:hover,
+#hero .carousel-control-prev-icon:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#hero .carousel-indicators li {
+  cursor: pointer;
+  list-style-type: none;
+}
+
+#hero .btn-menu,
+#hero .btn-book {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1;
+  /*margin: 0 10px;*/
+  animation-delay: 0.8s;
+  color: orangered;
+  border: 2px solid #ffb03b;
+  position: absolute;
+  bottom: 70px;
+
+
+
+
+}
+
+#hero .btn-menu:hover,
+#hero .btn-book:hover {
+  background: #FF512F;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 28px;
+
+  }
+}
+
+@media (min-width: 1024px) {
+  #hero p {
+    width: 50%;
+
+  }
+
+  #hero .carousel-control-prev,
+  #hero .carousel-control-next {
+    width: 5%;
+  }
+}
+
+
+
+
+#hero .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+
+
+
+
+
+
+
+</style>
+
+
+<script>
+
+(function() {
+  "use strict";
+
+  /**
+   * Easy selector helper function
+   */
+  const select = (el, all = false) => {
+    el = el.trim()
+    if (all) {
+      return [...document.querySelectorAll(el)]
+    } else {
+      return document.querySelector(el)
+    }
+  }
+
+
+
+  /**
+   * Hero carousel indicators
+   */
+  let heroCarouselIndicators = select("#hero-carousel-indicators")
+  let heroCarouselItems = select('#heroCarousel .carousel-item', true)
+
+  heroCarouselItems.forEach((item, index) => {
+    (index === 0) ?
+    heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "' class='active'></li>":
+      heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "'></li>"
+  });
+
+
+
+
+
+
+
+})()
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  &lt;!&ndash; ======= Hero Section ======= &ndash;&gt;-->
+<!--<section id="hero" class="hero">-->
+<!--    <div class="container position-relative">-->
+<!--      <div class="row gy-5" data-aos="fade-in">-->
+<!--        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">-->
+<!--          <h2>Welcome to <span>Pheonix Marketing Agency</span></h2>-->
+<!--          <p>"We are not just a service provider, we are architects of digital success."</p>-->
+<!--          <div class="d-flex justify-content-center justify-content-lg-start">-->
+<!--            <a href="#contact" class="btn-get-started">Request a Call Back</a>-->
+<!--            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>-->
+<!--          </div>-->
+<!--        </div>-->
+
+
+<!--        <div class="col-lg-6 order-1 order-lg-2">-->
+<!--          <img src="static/home/img/hero-img.svg" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">-->
+<!--        </div>-->
+
+
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="icon-boxes position-relative">-->
+<!--      <div class="container position-relative">-->
+<!--        <div class="row gy-4 mt-5">-->
+
+<!--          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">-->
+<!--            <div class="icon-box">-->
+<!--              <div class="icon"><i class="bi bi-easel"></i></div>-->
+<!--              <h4 class="title"><a href="" class="stretched-link">Website Design</a></h4>-->
+<!--            </div>-->
+<!--          </div>&lt;!&ndash;End Icon Box &ndash;&gt;-->
+
+<!--          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">-->
+<!--            <div class="icon-box">-->
+<!--              <div class="icon"><i class="bi bi-gem"></i></div>-->
+<!--              <h4 class="title"><a href="" class="stretched-link">Graphic Design</a></h4>-->
+<!--            </div>-->
+<!--          </div>&lt;!&ndash;End Icon Box &ndash;&gt;-->
+
+<!--          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">-->
+<!--            <div class="icon-box">-->
+<!--              <div class="icon"><i class="bi bi-geo-alt"></i></div>-->
+<!--              <h4 class="title"><a href="" class="stretched-link">Search Engine Optimization (SEO)</a></h4>-->
+<!--            </div>-->
+<!--          </div>&lt;!&ndash;End Icon Box &ndash;&gt;-->
+
+<!--          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">-->
+<!--            <div class="icon-box">-->
+<!--              <div class="icon"><i class="bi bi-command"></i></div>-->
+<!--              <h4 class="title"><a href="" class="stretched-link">Content Writing</a></h4>-->
+<!--            </div>-->
+<!--          </div>&lt;!&ndash;End Icon Box &ndash;&gt;-->
+
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    </div>-->
+<!--  </section>-->
+<!--  &lt;!&ndash; End Hero Section &ndash;&gt;-->
+
+
+
+
+  <main id="main">
+
+<!--    &lt;!&ndash; ======= About Us Section ======= &ndash;&gt;-->
+<!--    <section id="about" class="about">-->
+<!--      <div class="container" data-aos="fade-up">-->
+
+<!--        <div class="section-header">-->
+<!--          <h2>About Us</h2>-->
+<!--          <p>Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat sunt id nobis omnis tiledo stran delop</p>-->
+<!--        </div>-->
+
+<!--        <div class="row gy-4">-->
+<!--          <div class="col-lg-6">-->
+<!--            <h3>Voluptatem dignissimos provident quasi corporis</h3>-->
+<!--            <img src="static/home/img/about.jpg" class="img-fluid rounded-4 mb-4" alt="">-->
+<!--            <p>Ut fugiat ut sunt quia veniam. Voluptate perferendis perspiciatis quod nisi et. Placeat debitis quia recusandae odit et consequatur voluptatem. Dignissimos pariatur consectetur fugiat voluptas ea.</p>-->
+<!--            <p>Temporibus nihil enim deserunt sed ea. Provident sit expedita aut cupiditate nihil vitae quo officia vel. Blanditiis eligendi possimus et in cum. Quidem eos ut sint rem veniam qui. Ut ut repellendus nobis tempore doloribus debitis explicabo similique sit. Accusantium sed ut omnis beatae neque deleniti repellendus.</p>-->
+<!--          </div>-->
+<!--          <div class="col-lg-6">-->
+<!--            <div class="content ps-0 ps-lg-5">-->
+<!--              <p class="fst-italic">-->
+<!--                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore-->
+<!--                magna aliqua.-->
+<!--              </p>-->
+<!--              <ul>-->
+<!--                <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>-->
+<!--                <li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>-->
+<!--                <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>-->
+<!--              </ul>-->
+<!--              <p>-->
+<!--                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate-->
+<!--                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident-->
+<!--              </p>-->
+
+<!--              <div class="position-relative mt-4">-->
+<!--                <img src="static/home/img/about-2.jpg" class="img-fluid rounded-4" alt="">-->
+<!--                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </section>&lt;!&ndash; End About Us Section &ndash;&gt;-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ======= Clients Section ======= -->
+<br/><br/><br/><br/>
+   <div class="section-header">
+          <h2>Our Clints</h2>
+          <p>"Our clients are the heartbeat of our success. We collaborate with diverse partners,
+            from startups to industry leaders, tailoring solutions to amplify their unique visions.
+            Our client-centric approach fosters lasting relationships, fueled by trust and results.
+            Join the ranks of satisfied collaborators and let's achieve milestones together."</p>
+        </div><hr/>
+
+    <section id="clients" class="clients">
+      <div class="container" data-aos="zoom-out">
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="static/home/img/clients/client-1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/home/img/clients/client-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/home/img/clients/waycool.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/home/img/clients/thinkjs.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/home/img/clients/pmg.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/home/img/clients/drdo.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/home/img/clients/client-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/home/img/clients/client-8.png" class="img-fluid" alt=""></div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+
+
+<style>
+      /* Define the animation */
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Apply the animation to the swiper-wrapper */
+.clients-slider .swiper-wrapper {
+  display: flex;
+  animation: slide 15s linear infinite;
+}
+
+/* Pause the animation on hover */
+.clients-slider .swiper-wrapper:hover {
+  animation-play-state: paused;
+}
+
+
+</style>
+
+
+<script>
+// Stop the animation on hover
+document.querySelector('.clients-slider .swiper-wrapper').addEventListener('mouseover', function() {
+  this.style.animationPlayState = 'paused';
+});
+
+// Resume the animation when not hovering
+document.querySelector('.clients-slider .swiper-wrapper').addEventListener('mouseout', function() {
+  this.style.animationPlayState = 'running';
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--    &lt;!&ndash; ======= Stats Counter Section ======= &ndash;&gt;-->
+<!--    <section id="stats-counter" class="stats-counter">-->
+<!--      <div class="container" data-aos="fade-up">-->
+
+<!--        <div class="row gy-4 align-items-center">-->
+
+<!--          <div class="col-lg-6">-->
+<!--            <img src="static/home/img/stats-img.svg" alt="" class="img-fluid">-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-6">-->
+
+<!--            <div class="stats-item d-flex align-items-center">-->
+<!--              <span data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="1" class="purecounter"></span>-->
+<!--              <p><strong>Happy Clients</strong> consequuntur quae diredo para mesta</p>-->
+<!--            </div>&lt;!&ndash; End Stats Item &ndash;&gt;-->
+
+<!--            <div class="stats-item d-flex align-items-center">-->
+<!--              <span data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="1" class="purecounter"></span>-->
+<!--              <p><strong>Projects</strong> adipisci atque cum quia aut</p>-->
+<!--            </div>&lt;!&ndash; End Stats Item &ndash;&gt;-->
+
+<!--            <div class="stats-item d-flex align-items-center">-->
+<!--              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>-->
+<!--              <p><strong>Industry</strong> aut commodi quaerat</p>-->
+<!--            </div>&lt;!&ndash; End Stats Item &ndash;&gt;-->
+
+<!--          </div>-->
+
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </section>&lt;!&ndash; End Stats Counter Section &ndash;&gt;-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts  section-bg">
+      <div class="container">
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Happy Clients</strong></p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Projects Completed</strong> </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hours Of Support</strong></p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Industry Support Providing</strong></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+
+<br/><br/> <br/><br/>
+
+
+
+
+    <style>
+
+/*--------------------------------------------------------------
+# Counts
+--------------------------------------------------------------*/
+.counts {
+  padding-bottom: 30px;
+   background: #9be9a8;
+}
+
+.counts .count-box {
+  padding: 30px;
+  width: 100%;
+
+}
+
+.counts .count-box i {
+  display: block;
+  font-size: 44px;
+  color: #67b0d1;
+  float: left;
+  line-height: 0;
+}
+
+.counts .count-box span {
+  font-size: 48px;
+  line-height: 40px;
+  display: block;
+  font-weight: 700;
+  color: #2f4d5a;
+  margin-left: 60px;
+}
+
+.counts .count-box p {
+  padding: 15px 0 0 0;
+  margin: 0 0 0 60px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: black;
+}
+
+.counts .count-box a {
+  font-weight: 600;
+  display: block;
+  margin-top: 20px;
+  color: #49788c;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  transition: ease-in-out 0.3s;
+}
+
+.counts .count-box a:hover {
+  color: #6e9fb4;
+}
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--    &lt;!&ndash; ======= Call To Action Section ======= &ndash;&gt;-->
+<!--    <section id="call-to-action" class="call-to-action">-->
+<!--      <div class="container text-center" data-aos="zoom-out">-->
+<!--        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>-->
+<!--        <h3>Call To Action</h3>-->
+<!--        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+<!--        <a class="cta-btn" href="#">Call To Action</a>-->
+<!--      </div>-->
+<!--    </section>&lt;!&ndash; End Call To Action Section &ndash;&gt;-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--    &lt;!&ndash; ======= Our Services Section ======= &ndash;&gt;-->
+<!--    <section id="services" class="services sections-bg">-->
+<!--      <div class="container" data-aos="fade-up">-->
+
+<!--        <div class="section-header">-->
+<!--          <h2>Core Services</h2>-->
+<!--          <p>Grow your business with us. We provide solution in Web Design, Graphic Design, SEO, Photography, Content Writing and so on..</p>-->
+<!--        </div>-->
+
+<!--        <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">-->
+
+<!--          <div class="col-lg-4 col-md-6">-->
+<!--            <div class="service-item  position-relative">-->
+<!--              <div class="icon">-->
+<!--                <i class="bi bi-activity"></i>-->
+<!--              </div>-->
+<!--              <h3>WebSite Design</h3>-->
+<!--              <p>Elevate your brand with captivating and user-friendly websites crafted by our expert designers. We combine aesthetics with seamless functionality to ensure a unique online experience that leaves a lasting impression.</p>-->
+<!--              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>-->
+<!--            </div>-->
+<!--          </div>&lt;!&ndash; End Service Item &ndash;&gt;-->
+
+<!--          <div class="col-lg-4 col-md-6">-->
+<!--            <div class="service-item position-relative">-->
+<!--              <div class="icon">-->
+<!--                <i class="bi bi-broadcast"></i>-->
+<!--              </div>-->
+<!--              <h3>Graphic Design</h3>-->
+<!--              <p>Transform your brand into a visual masterpiece. Our graphic design wizards craft eye-catching logos, marketing collateral, and visuals that are not just seen but remembered.</p>-->
+<!--              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>-->
+<!--            </div>-->
+<!--          </div>&lt;!&ndash; End Service Item &ndash;&gt;-->
+
+<!--          <div class="col-lg-4 col-md-6">-->
+<!--            <div class="service-item position-relative">-->
+<!--              <div class="icon">-->
+<!--                <i class="bi bi-easel"></i>-->
+<!--              </div>-->
+<!--              <h3>Search Engine Optimization (SEO)</h3>-->
+<!--              <p>Boost your online visibility and climb the search engine ranks with our strategic SEO services. We optimize your digital footprint to drive organic traffic, ensuring your business stands out in the competitive online landscape</p>-->
+<!--              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>-->
+<!--            </div>-->
+<!--          </div>&lt;!&ndash; End Service Item &ndash;&gt;-->
+
+<!--          <div class="col-lg-4 col-md-6">-->
+<!--            <div class="service-item position-relative">-->
+<!--              <div class="icon">-->
+<!--                <i class="bi bi-bounding-box-circles"></i>-->
+<!--              </div>-->
+<!--              <h3>Photography</h3>-->
+<!--              <p>Capturing the essence of your brand through lens mastery. Our photography services bring products, events, and people to life, creating a visual narrative that resonates with your audience and enhances your brand image.</p>-->
+<!--              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>-->
+<!--            </div>-->
+<!--          </div>&lt;!&ndash; End Service Item &ndash;&gt;-->
+
+<!--          <div class="col-lg-4 col-md-6">-->
+<!--            <div class="service-item position-relative">-->
+<!--              <div class="icon">-->
+<!--                <i class="bi bi-calendar4-week"></i>-->
+<!--              </div>-->
+<!--              <h3>Lead Generation</h3>-->
+<!--              <p>Supercharge your growth engine. Our lead generation tactics are precision-targeted, ensuring a steady influx of high-quality leads that transform into loyal customers.</p>-->
+<!--              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>-->
+<!--            </div>-->
+<!--          </div>&lt;!&ndash; End Service Item &ndash;&gt;-->
+
+<!--          <div class="col-lg-4 col-md-6">-->
+<!--            <div class="service-item position-relative">-->
+<!--              <div class="icon">-->
+<!--                <i class="bi bi-chat-square-text"></i>-->
+<!--              </div>-->
+<!--              <h3>Content Writing</h3>-->
+<!--              <p>Words that resonate, engage, and convert. Our content writing team crafts compelling narratives, persuasive copy, and informative articles that not only tell your story but also drive results.</p>-->
+<!--              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>-->
+<!--            </div>-->
+<!--          </div>&lt;!&ndash; End Service Item &ndash;&gt;-->
+
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </section>&lt;!&ndash; End Our Services Section &ndash;&gt;-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             <!-- ======= Services Section ======= -->
+    <section id="services_main">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2 class="section-title">Core Services</h2>
+          <p class="section-description">Ignite your online success with our dynamic digital marketing agency.
+            Specializing in website design, graphic design, SEO, photography, lead generation,
+            and compelling content writing, we craft tailored strategies to elevate your brand.
+            Harness the power of our expertise to captivate audiences, boost visibility,
+            and drive conversions.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="bi bi-code-slash"></i></div>
+              <h4 class="title"><a href="#" onclick="return false;">WebSite Design</a></h4>
+              <p class="description">Architect digital experiences. Blend design finesse with functionality, sculpting websites that speak volumes, engage, and drive meaningful interactions.</p>
+
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="bi bi-card-checklist"></i></div>
+              <h4 class="title"><a href="#" onclick="return false;">Graphic Design</a></h4>
+              <p class="description">Visual storytelling at its best design graphics that communicate your brand message, fostering recognition and engagement with your audience.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="bi bi-bar-chart"></i></div>
+              <h4 class="title"><a href="#" onclick="return false;">Search Engine Optimization (SEO)</a></h4>
+              <p class="description">Navigate the digital maze strategically. Optimize content landscapes, ensuring your brand emerges organically, resonating with audiences and search algorithms alike.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="bi bi-camera-fill"></i></div>
+              <h4 class="title"><a href="#" onclick="return false;">Photography</a></h4>
+              <p class="description">Freeze moments in time. Professional photography that goes beyond visuals, telling vivid stories, and painting a canvas of brand authenticity.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="bi bi-brightness-high"></i></div>
+              <h4 class="title"><a href="#" onclick="return false;">Lead Generation</a></h4>
+              <p class="description">Fuel your business growth with our targeted lead generation campaigns, designed to attract and convert high-quality leads into loyal customers.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+              <h4 class="title"><a href="#" onclick="return false;">Content Writing</a></h4>
+              <p class="description">Captivate your audience with strategically crafted content that not only informs but also engages, reinforcing your brand's unique voice</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+             <!-- ======= Services Section ======= -->
+    <section id="services_main">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2 class="section-title">Marketing Services</h2>
+          <p class="section-description">Unlock success with our comprehensive marketing services.
+            From strategic planning to digital campaigns, we elevate your brand's presence.
+            Our expert team maximizes ROI through tailored solutions.
+            Drive engagement, amplify reach, and achieve your business goals with our results-driven marketing
+            expertise. Elevate your brand, captivate your audience, and thrive with our holistic marketing approach.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <h4 class="title"><a href="#" onclick="return false;">WhatsApp Marketing</a></h4>
+              <p class="description"> Connect directly with audiences, leveraging the power of personalized messaging for effective and engaging marketing campaigns on WhatsApp.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="fa-regular fa-envelope"></i></i></div>
+              <h4 class="title"><a href="#" onclick="return false;">Email Marketing</a></h4>
+              <p class="description">Unlock the potential of personalized and effective email campaigns that nurture customer relationships, drive conversions, and maximize return on investment.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="bi bi-facebook"></i></div>
+              <h4 class="title"><a href="#" onclick="return false;">Social Media Marketing</a></h4>
+              <p class="description">Harnessing the power of social platforms to build a strong online community, engage with your audience, and amplify brand awareness.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="bi bi-instagram"></i></div>
+              <h4 class="title"><a href="#" onclick="return false;">Social Media Handling</a></h4>
+              <p class="description">Curate, schedule, and engage. Manage social media platforms strategically, fostering a vibrant online presence and meaningful connections with the audience.</p>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="bi bi-binoculars"></i></div>
+              <h4 class="title"><a href="#" onclick="return false;">Website Handling</a></h4>
+              <p class="description"> Navigate the digital realm seamlessly. From updates to optimizations, ensure your website stands as a dynamic and engaging online presence.</p>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="bi bi-rocket-takeoff"></i></div>
+              <h4 class="title"><a href="#" onclick="return false;">Web Hosting</a></h4>
+              <p class="description">Secure, reliable hosting solutions. Ensure your website's performance and availability, providing a stable foundation for a seamless online experience.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+         <!-- ======= Services Section ======= -->
+    <section id="services_main">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2 class="section-title">Design Services</h2>
+          <p class="section-description">Transform your ideas into eye-catching reality with our design services.
+            We create visuals that tell your story effortlessly. From logos to user-friendly interfaces,
+            our team simplifies the complex, ensuring your brand stands out effortlessly.
+            Elevate your image with designs that resonate, connect, and leave a lasting impression.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="fa-brands fa-pied-piper-pp"></i></div>
+              <h4 class="title"><a href="#" onclick="return false;">Logo Design</a></h4>
+              <p class="description">Our logo designs aren't just symbols; they're visual ambassadors that leave an indelible mark on your audience's memory.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="bi bi-card-checklist"></i></div>
+              <h4 class="title"><a href="#" onclick="return false;">Portfolio Design</a></h4>
+              <p class="description">Craft visually stunning portfolios showcasing skills, achievements, and creativity, leaving a lasting impression on clients and employers.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="bi bi-bar-chart"></i></div>
+              <h4 class="title"><a href="#" onclick="return false;">Brochure Design</a></h4>
+              <p class="description">Transform ideas into tangible stories, designing brochures that speak, compelling audiences and making your brand unforgettable.</p>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="bi bi-send"></i></div>
+              <h4 class="title"><a href="#" onclick="return false;">Branding and Design</a></h4>
+              <p class="description"> Weave brand narratives into visually compelling designs, creating an identity that resonates, captivates, and leaves a lasting impression.</p>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="bi bi-brightness-high"></i></div>
+              <h4 class="title"><a href="#" onclick="return false;">Banner Design</a></h4>
+              <p class="description">Craft visual poetry in banners. From pixels to emotions, create designs that transcend, making every click a meaningful experience.
+</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="bi bi-rocket-takeoff"></i></div>
+              <h4 class="title"><a href="#" onclick="return false;">Landing Page Design</a></h4>
+              <p class="description">Design journeys, not just pages. Create landing experiences that convert, merging aesthetics with strategy for an immersive user adventure.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+
+
+<style>
+
+/* Services Section
+--------------------------------*/
+@font-face {
+    font-family: "semibold";
+    src: url(Degular-Semibold.otf) format("truetype");
+}
+#services_main h4{
+  font-family: 'semibold',  Poppins;
+}
+
+
+
+#services_main {
+  background: #fff;
+  background-size: cover;
+  padding: 10px 0 60px 0;
+}
+
+#services_main .box {
+  padding: 50px 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  height: 200px;
+  position: relative;
+  background: #fafafa;
+}
+
+#services_main .icon {
+  position: absolute;
+  top: -36px;
+  left: calc(50% - 36px);
+  transition: 0.2s;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 72px;
+  height: 72px;
+  background: #f85a40;
+}
+
+#services_main .icon a {
+  display: inline-block;
+}
+
+#services_main .icon i {
+  color: #fff;
+  font-size: 24px;
+  line-height: 0;
+}
+
+#services_main .box:hover .icon {
+  background: dodgerblue;
+  border: 2px solid hotpink;
+}
+
+#services_main .box:hover .icon i {
+  color: white;
+}
+
+#services_main .box:hover .icon a {
+  color: #2dc997;
+}
+
+#services_main .title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+#services_main .title a {
+  color: #111;
+}
+#services_main .title:hover a {
+  color:#f85a40;
+}
+
+#services_main .description {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Open Sans";
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--        &lt;!&ndash; ======= Services Section ======= &ndash;&gt;-->
+<!--    <section id="services" class="services section-bg" style="background:ghostwhite">-->
+<!--      <div class="container" data-aos="fade-up">-->
+
+<!--        <div class="section-header">-->
+<!--          <h2>Marketing Services</h2>-->
+<!--          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
+<!--        </div>-->
+
+<!--        <div class="row gy-4">-->
+<!--          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">-->
+<!--            <div class="icon-box iconbox-blue">-->
+<!--              <div class="icon">-->
+<!--                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">-->
+<!--                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>-->
+<!--                </svg>-->
+<!--                <i class="bx bxl-dribbble"></i>-->
+<!--              </div>-->
+<!--              <h4><a href="">WhatsApp Marketing </a></h4>-->
+<!--              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">-->
+<!--            <div class="icon-box iconbox-orange ">-->
+<!--              <div class="icon">-->
+<!--                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">-->
+<!--                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426"></path>-->
+<!--                </svg>-->
+<!--                <i class="bx bx-file"></i>-->
+<!--              </div>-->
+<!--              <h4><a href="">Email Marketing</a></h4>-->
+<!--              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">-->
+<!--            <div class="icon-box iconbox-pink">-->
+<!--              <div class="icon">-->
+<!--                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">-->
+<!--                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"></path>-->
+<!--                </svg>-->
+<!--                <i class="bx bx-tachometer"></i>-->
+<!--              </div>-->
+<!--              <h4><a href="">Social Media Marketing</a></h4>-->
+<!--              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">-->
+<!--            <div class="icon-box iconbox-yellow">-->
+<!--              <div class="icon">-->
+<!--                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">-->
+<!--                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>-->
+<!--                </svg>-->
+<!--                <i class="bx bx-layer"></i>-->
+<!--              </div>-->
+<!--              <h4><a href="">Social Media Handling</a></h4>-->
+<!--              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">-->
+<!--            <div class="icon-box iconbox-red">-->
+<!--              <div class="icon">-->
+<!--                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">-->
+<!--                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>-->
+<!--                </svg>-->
+<!--                <i class="bx bx-slideshow"></i>-->
+<!--              </div>-->
+<!--              <h4><a href="">Branding and Design</a></h4>-->
+<!--              <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">-->
+<!--            <div class="icon-box iconbox-teal">-->
+<!--              <div class="icon">-->
+<!--                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">-->
+<!--                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"></path>-->
+<!--                </svg>-->
+<!--                <i class="bx bx-arch"></i>-->
+<!--              </div>-->
+<!--              <h4><a href="">Web Hosting</a></h4>-->
+<!--              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </section>&lt;!&ndash; End Services Section &ndash;&gt;-->
+
+
+
+
+
+<!--<style>-->
+<!--  .services .icon-box {-->
+<!--  text-align: center;-->
+<!--  padding: 70px 20px 80px 20px;-->
+<!--  transition: all ease-in-out 0.3s;-->
+<!--  background: #fff;-->
+
+
+<!--}-->
+
+<!--.services .icon-box .icon {-->
+<!--  margin: 0 auto;-->
+<!--  width: 100px;-->
+<!--  height: 100px;-->
+<!--  display: flex;-->
+<!--  align-items: center;-->
+<!--  justify-content: center;-->
+<!--  transition: ease-in-out 0.3s;-->
+<!--  position: relative;-->
+<!--}-->
+
+<!--.services .icon-box .icon i {-->
+<!--  font-size: 36px;-->
+<!--  transition: 0.5s;-->
+<!--  position: relative;-->
+<!--}-->
+
+<!--.services .icon-box .icon svg {-->
+<!--  position: absolute;-->
+<!--  top: 0;-->
+<!--  left: 0;-->
+<!--}-->
+
+<!--.services .icon-box .icon svg path {-->
+<!--  transition: 0.5s;-->
+<!--  fill: #f5f5f5;-->
+<!--}-->
+
+<!--.services .icon-box h4 {-->
+<!--  font-weight: 600;-->
+<!--  margin: 10px 0 15px 0;-->
+<!--  font-size: 22px;-->
+<!--}-->
+
+<!--.services .icon-box h4 a {-->
+<!--  color: #2c4964;-->
+<!--  transition: ease-in-out 0.3s;-->
+<!--}-->
+
+<!--.services .icon-box p {-->
+<!--  line-height: 24px;-->
+<!--  font-size: 14px;-->
+<!--  margin-bottom: 0;-->
+<!--}-->
+
+<!--.services .icon-box:hover {-->
+<!--  border-color: #fff;-->
+<!--  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);-->
+<!--}-->
+
+<!--.services .iconbox-blue i {-->
+<!--  color: #47aeff;-->
+<!--}-->
+
+<!--.services .iconbox-blue:hover .icon i {-->
+<!--  color: #fff;-->
+<!--}-->
+
+<!--.services .iconbox-blue:hover .icon path {-->
+<!--  fill: #47aeff;-->
+<!--}-->
+
+<!--.services .iconbox-orange i {-->
+<!--  color: #ffa76e;-->
+<!--}-->
+
+<!--.services .iconbox-orange:hover .icon i {-->
+<!--  color: #fff;-->
+<!--}-->
+
+<!--.services .iconbox-orange:hover .icon path {-->
+<!--  fill: #ffa76e;-->
+<!--}-->
+
+<!--.services .iconbox-pink i {-->
+<!--  color: #e80368;-->
+<!--}-->
+
+<!--.services .iconbox-pink:hover .icon i {-->
+<!--  color: #fff;-->
+<!--}-->
+
+<!--.services .iconbox-pink:hover .icon path {-->
+<!--  fill: #e80368;-->
+<!--}-->
+
+<!--.services .iconbox-yellow i {-->
+<!--  color: #ffbb2c;-->
+<!--}-->
+
+<!--.services .iconbox-yellow:hover .icon i {-->
+<!--  color: #fff;-->
+<!--}-->
+
+<!--.services .iconbox-yellow:hover .icon path {-->
+<!--  fill: #ffbb2c;-->
+<!--}-->
+
+<!--.services .iconbox-red i {-->
+<!--  color: #ff5828;-->
+<!--}-->
+
+<!--.services .iconbox-red:hover .icon i {-->
+<!--  color: #fff;-->
+<!--}-->
+
+<!--.services .iconbox-red:hover .icon path {-->
+<!--  fill: #ff5828;-->
+<!--}-->
+
+<!--.services .iconbox-teal i {-->
+<!--  color: #11dbcf;-->
+<!--}-->
+
+<!--.services .iconbox-teal:hover .icon i {-->
+<!--  color: #fff;-->
+<!--}-->
+
+<!--.services .iconbox-teal:hover .icon path {-->
+<!--  fill: #11dbcf;-->
+<!--}-->
+<!--</style>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="section-header">
+         <h2>Dynamic Web Toolkit</h2>
+     </div>
+
+  <div class="bat-main">
+
+<div class="bat-card">
+<div class="svgContainer">
+  <svg class="svg-icon dartboard" viewBox="0 0 20 20">
+    <path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path>
+  </svg>
+
+  <svg class="svg-icon eyehole" viewBox="0 0 20 20">
+    <path d="M17.659,9.597h-1.224c-0.199-3.235-2.797-5.833-6.032-6.033V2.341c0-0.222-0.182-0.403-0.403-0.403S9.597,2.119,9.597,2.341v1.223c-3.235,0.2-5.833,2.798-6.033,6.033H2.341c-0.222,0-0.403,0.182-0.403,0.403s0.182,0.403,0.403,0.403h1.223c0.2,3.235,2.798,5.833,6.033,6.032v1.224c0,0.222,0.182,0.403,0.403,0.403s0.403-0.182,0.403-0.403v-1.224c3.235-0.199,5.833-2.797,6.032-6.032h1.224c0.222,0,0.403-0.182,0.403-0.403S17.881,9.597,17.659,9.597 M14.435,10.403h1.193c-0.198,2.791-2.434,5.026-5.225,5.225v-1.193c0-0.222-0.182-0.403-0.403-0.403s-0.403,0.182-0.403,0.403v1.193c-2.792-0.198-5.027-2.434-5.224-5.225h1.193c0.222,0,0.403-0.182,0.403-0.403S5.787,9.597,5.565,9.597H4.373C4.57,6.805,6.805,4.57,9.597,4.373v1.193c0,0.222,0.182,0.403,0.403,0.403s0.403-0.182,0.403-0.403V4.373c2.791,0.197,5.026,2.433,5.225,5.224h-1.193c-0.222,0-0.403,0.182-0.403,0.403S14.213,10.403,14.435,10.403"></path>
+  </svg>
+  <svg class="svg-icon batman">
+    <path class="svg-fill-primary" d="M86.578,41.004s-8.219,.295-8.607,7.685c0,0-9.824-4.379-11.571,7.874,0,0-8.653-5.402-14.586,9.744l-1.861-3.908-1.861,3.908c-5.933-15.146-14.586-9.744-14.586-9.744-1.752-12.253-11.571-7.874-11.571-7.874-.366-6.927-7.609-7.621-8.514-7.68,11.643,.442,15.904-7.314,15.904-7.314,3.015,13.499,14.097,14.603,14.097,14.603l2.43-9.335,1.461,4.379h5.28l1.457-4.379,2.43,9.335s11.087-1.103,14.102-14.603c0,0,4.282,7.798,15.996,7.31Z">
+  </path>
+  </svg>
+
+
+</div>
+<div class="bat-card-info">
+  <span>Fully Dynamic Website</span>
+  <p>Discover a new level of engagement with our dynamic website.</p>
+  <a href="https://api.whatsapp.com/send/?phone=8248060838&text&type=phone_number&app_absent=0" target="_blank" class="challengeButton">WhatsApp Us</a>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div class="bat-card">
+<div class="svgContainer">
+  <svg class="svg-icon dartboard" viewBox="0 0 20 20">
+    <path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path>
+  </svg>
+
+  <svg class="svg-icon eyehole" viewBox="0 0 20 20">
+    <path d="M17.659,9.597h-1.224c-0.199-3.235-2.797-5.833-6.032-6.033V2.341c0-0.222-0.182-0.403-0.403-0.403S9.597,2.119,9.597,2.341v1.223c-3.235,0.2-5.833,2.798-6.033,6.033H2.341c-0.222,0-0.403,0.182-0.403,0.403s0.182,0.403,0.403,0.403h1.223c0.2,3.235,2.798,5.833,6.033,6.032v1.224c0,0.222,0.182,0.403,0.403,0.403s0.403-0.182,0.403-0.403v-1.224c3.235-0.199,5.833-2.797,6.032-6.032h1.224c0.222,0,0.403-0.182,0.403-0.403S17.881,9.597,17.659,9.597 M14.435,10.403h1.193c-0.198,2.791-2.434,5.026-5.225,5.225v-1.193c0-0.222-0.182-0.403-0.403-0.403s-0.403,0.182-0.403,0.403v1.193c-2.792-0.198-5.027-2.434-5.224-5.225h1.193c0.222,0,0.403-0.182,0.403-0.403S5.787,9.597,5.565,9.597H4.373C4.57,6.805,6.805,4.57,9.597,4.373v1.193c0,0.222,0.182,0.403,0.403,0.403s0.403-0.182,0.403-0.403V4.373c2.791,0.197,5.026,2.433,5.225,5.224h-1.193c-0.222,0-0.403,0.182-0.403,0.403S14.213,10.403,14.435,10.403"></path>
+  </svg>
+  <svg class="svg-icon batman">
+    <path class="svg-fill-primary" d="M86.578,41.004s-8.219,.295-8.607,7.685c0,0-9.824-4.379-11.571,7.874,0,0-8.653-5.402-14.586,9.744l-1.861-3.908-1.861,3.908c-5.933-15.146-14.586-9.744-14.586-9.744-1.752-12.253-11.571-7.874-11.571-7.874-.366-6.927-7.609-7.621-8.514-7.68,11.643,.442,15.904-7.314,15.904-7.314,3.015,13.499,14.097,14.603,14.097,14.603l2.43-9.335,1.461,4.379h5.28l1.457-4.379,2.43,9.335s11.087-1.103,14.102-14.603c0,0,4.282,7.798,15.996,7.31Z">
+  </path>
+  </svg>
+
+
+</div>
+<div class="bat-card-info">
+  <span>Get Your Own CRM</span>
+  <p>Personalize your CRM experience and maximize business results.</p>
+    <a href="https://api.whatsapp.com/send/?phone=8248060838&text&type=phone_number&app_absent=0" target="_blank" class="challengeButton">WhatsApp Us</a>
+</div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="bat-card">
+<div class="svgContainer">
+  <svg class="svg-icon dartboard" viewBox="0 0 20 20">
+    <path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path>
+  </svg>
+
+  <svg class="svg-icon eyehole" viewBox="0 0 20 20">
+    <path d="M17.659,9.597h-1.224c-0.199-3.235-2.797-5.833-6.032-6.033V2.341c0-0.222-0.182-0.403-0.403-0.403S9.597,2.119,9.597,2.341v1.223c-3.235,0.2-5.833,2.798-6.033,6.033H2.341c-0.222,0-0.403,0.182-0.403,0.403s0.182,0.403,0.403,0.403h1.223c0.2,3.235,2.798,5.833,6.033,6.032v1.224c0,0.222,0.182,0.403,0.403,0.403s0.403-0.182,0.403-0.403v-1.224c3.235-0.199,5.833-2.797,6.032-6.032h1.224c0.222,0,0.403-0.182,0.403-0.403S17.881,9.597,17.659,9.597 M14.435,10.403h1.193c-0.198,2.791-2.434,5.026-5.225,5.225v-1.193c0-0.222-0.182-0.403-0.403-0.403s-0.403,0.182-0.403,0.403v1.193c-2.792-0.198-5.027-2.434-5.224-5.225h1.193c0.222,0,0.403-0.182,0.403-0.403S5.787,9.597,5.565,9.597H4.373C4.57,6.805,6.805,4.57,9.597,4.373v1.193c0,0.222,0.182,0.403,0.403,0.403s0.403-0.182,0.403-0.403V4.373c2.791,0.197,5.026,2.433,5.225,5.224h-1.193c-0.222,0-0.403,0.182-0.403,0.403S14.213,10.403,14.435,10.403"></path>
+  </svg>
+  <svg class="svg-icon batman">
+    <path class="svg-fill-primary" d="M86.578,41.004s-8.219,.295-8.607,7.685c0,0-9.824-4.379-11.571,7.874,0,0-8.653-5.402-14.586,9.744l-1.861-3.908-1.861,3.908c-5.933-15.146-14.586-9.744-14.586-9.744-1.752-12.253-11.571-7.874-11.571-7.874-.366-6.927-7.609-7.621-8.514-7.68,11.643,.442,15.904-7.314,15.904-7.314,3.015,13.499,14.097,14.603,14.097,14.603l2.43-9.335,1.461,4.379h5.28l1.457-4.379,2.43,9.335s11.087-1.103,14.102-14.603c0,0,4.282,7.798,15.996,7.31Z">
+  </path>
+  </svg>
+
+
+</div>
+<div class="bat-card-info">
+  <span>Inbuilt Admin Pannel</span>
+  <p>Optimize your workflow and productivity with our integrated admin panel solution..</p>
+  <a href="https://api.whatsapp.com/send/?phone=8248060838&text&type=phone_number&app_absent=0" target="_blank" class="challengeButton">WhatsApp Us</a>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<style>
+
+.bat-main{
+    display:flex;
+    padding-left:20px
+
+
+}
+    .bat-card {
+  width: 500px;
+  height: 270px;
+        background:#c1e2b3;
+  /*background: linear-gradient(120deg, rgba(255,237,57,1) 0%, rgba(247,253,45,1) 100%);*/
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+  margin-right:30px!important;
+
+}
+
+.bat-card::before {
+  content: 'XpertWe';
+  position: absolute;
+  width: 0px;
+  height: 60px;
+  border-left: 30px solid #3A486F;
+  border-right: 30px solid #3A486F;
+  border-bottom: 10px solid transparent;
+  top: -10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 8px;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+
+.svg-icon {
+  width: 5em;
+  height: 5em;
+  fill: #3A486F;
+}
+
+.svgContainer {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svgContainer svg {
+  position: absolute;
+  overflow: visible;
+}
+
+.dartboard {
+  width: 2em;
+  height: 2em;
+  padding: 6px;
+  border: 3px solid #3A486F;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  transform: scale(2) rotate(34deg);
+}
+
+.eyehole {
+  transform: scale(1.2) rotate(-270deg);
+  transition: all 0.5s ease;
+}
+
+.batman {
+  transition: all .4s ease-in;
+  transform: rotate(55deg) translate(240px, -45px) scale(1.2);
+}
+
+.svg-fill-primary {
+  fill: #242424;
+}
+
+.bat-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.bat-card span {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color:#FF2400;
+}
+
+.bat-card-info p {
+  color: #3A486F;
+  font-weight: 600;
+}
+
+.bat-card-info .challengeButton {
+  text-decoration: none;
+  background-color: #343434;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+
+.bat-card:hover {
+  box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.83);
+}
+
+.bat-card:hover .batman {
+  transform: rotate(-50deg) translate(12px, 2px);
+}
+
+.bat-card:hover .eyehole {
+  transform: scale(1);
+}
+
+.bat-card:hover .dartboard {
+  transform: scale(1) rotate(0deg) translate(0, 0);
+}
+
+.challengeButton:hover {
+  background-color: #3A486F;
+}
+
+.bat-card:hover::before {
+  border-left: 30px solid #182445;
+  border-right: 30px solid #182445;
+  border-bottom: 10px solid transparent;
+  top: -15px;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br>
+     <div class="section-header">
+         <h2>The Power of Automation in Business</h2>
+     </div>
+<div class="timeline-card-main">
+<ul class="timeline-cards">
+    <li style="--accent-color:#41516C">
+        <div class="date">1. Increased Efficiency:</div>
+        <div class="title">Increased Efficiency:</div>
+        <div class="descr">Automation streamlines processes, reducing manual labor and errors, leading to higher productivity.</div>
+    </li>
+    <li style="--accent-color:#FBCA3E">
+        <div class="date">2. Cost Savings:</div>
+        <div class="title">Cost Savings:</div>
+        <div class="descr">By automating repetitive tasks, businesses can save on labor costs and reallocate resources more efficiently.</div>
+    </li>
+    <li style="--accent-color:#E24A68">
+        <div class="date">3. Time optimization:</div>
+        <div class="title">Time optimization:</div>
+        <div class="descr">Automation frees up employees' time, empowering them to focus on strategic tasks, fostering innovation and growth.</div>
+    </li>
+    <li style="--accent-color:#1B5F8C">
+        <div class="date">4. Better Customer Experience:</div>
+        <div class="title">Better Customer Experience:</div>
+        <div class="descr">Automation enables personalized and timely interactions, improving customer satisfaction and loyalty.</div>
+    </li>
+    <li style="--accent-color:#4CADAD">
+        <div class="date">5. Better Resource Utilization:</div>
+        <div class="title">Better Resource Utilization:</div>
+        <div class="descr">Automation optimizes resource allocation, ensuring that resources are used efficiently to meet business objectives.</div>
+    </li>
+</ul>
+</div>
+
+
+
+<style>
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.timeline-card-main {
+  --color: rgba(30, 30, 30);
+  --bgColor: rgba(245, 245, 245);
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--color);
+  /*background: var(--bgColor);*/
+}
+
+
+
+.timeline-cards {
+  --col-gap: 2rem;
+  --row-gap: 2rem;
+  --line-w: 0.25rem;
+  display: grid;
+  grid-template-columns: var(--line-w) 1fr;
+  grid-auto-columns: max-content;
+  column-gap: var(--col-gap);
+  list-style: none;
+  width: min(60rem, 90%);
+  margin-inline: auto;
+}
+
+/* line */
+.timeline-cards::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 20;
+  background: rgb(225, 225, 225);
+  border-radius: calc(var(--line-w) / 2);
+}
+
+/* columns*/
+
+/* row gaps */
+.timeline-cards li:not(:last-child) {
+  margin-bottom: var(--row-gap);
+}
+
+/* card */
+.timeline-cards li {
+  grid-column: 2;
+  --inlineP: 1.5rem;
+  margin-inline: var(--inlineP);
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+}
+
+/* date */
+.timeline-cards li .date {
+  --dateH: 3rem;
+  height: var(--dateH);
+  margin-inline: calc(var(--inlineP) * -1);
+  font-family: "semibold", sans-serif ;
+  text-align: center;
+  background-color: var(--accent-color);
+
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  display: grid;
+  place-content: center;
+  position: relative;
+
+  border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+}
+
+/* date flap */
+.timeline-cards li .date::before {
+  content: "";
+  width: var(--inlineP);
+  aspect-ratio: 1;
+  background: var(--accent-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+  position: absolute;
+  top: 100%;
+
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  right: 0;
+}
+
+/* circle */
+.timeline-cards li .date::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  aspect-ratio: 1;
+  background: var(--bgColor);
+  border: 0.3rem solid var(--accent-color);
+  border-radius: 50%;
+  top: 50%;
+
+  transform: translate(50%, -50%);
+  right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+}
+
+/* title descr */
+.timeline-cards li .title,
+.timeline-cards li .descr {
+  background: var(--bgColor);
+  position: relative;
+  padding-inline: 1.5rem;
+}
+.timeline-cards li .title {
+  overflow: hidden;
+  padding-block-start: 1.5rem;
+  padding-block-end: 1rem;
+  font-weight: 500;
+  font-family: "semibold";
+}
+.timeline-cards li .descr {
+  padding-block-end: 1.5rem;
+  font-weight: 300;
+}
+
+/* shadows */
+.timeline-cards li .title::before,
+.timeline-cards li .descr::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  left: 50%;
+  border-radius: 50%;
+  filter: blur(4px);
+  transform: translate(-50%, 50%);
+}
+.timeline-cards li .title::before {
+  bottom: calc(100% + 0.125rem);
+}
+
+.timeline-cards li .descr::before {
+  z-index: -1;
+  bottom: 0.25rem;
+}
+
+@media (min-width: 40rem) {
+  .timeline-cards {
+    grid-template-columns: 1fr var(--line-w) 1fr;
+  }
+  .timeline-cards::before {
+    grid-column: 2;
+  }
+  .timeline-cards li:nth-child(odd) {
+    grid-column: 1;
+  }
+  .timeline-cards li:nth-child(even) {
+    grid-column: 3;
+  }
+
+  /* start second card */
+  .timeline-cards li:nth-child(2) {
+    grid-row: 2/4;
+  }
+
+  .timeline-cards li:nth-child(odd) .date::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    left: 0;
+  }
+
+  .timeline-cards li:nth-child(odd) .date::after {
+    transform: translate(-50%, -50%);
+    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  .timeline-cards li:nth-child(odd) .date {
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+  }
+}
+
+.credits {
+  margin-top: 1rem;
+  text-align: right;
+}
+.credits a {
+  color: var(--color);
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section-header">
+         <h2>Listen closely to our clients' feedback straight from their mouths</h2>
+     </div>
+
+
+
+<style>
+body, html {
+  overflow-x: hidden;
+}
+
+.video-review-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: calc(100% + 380px);
+  margin-left: -20px;
+  animation: video-slide 20s linear infinite;
+}
+
+.video-review-card {
+  flex: 0 0 auto;
+  width: 360px;
+  background-color: #f0f0f0;
+  /*background: #b1f5a3;*/
+  border-radius: 15px;
+  margin-right: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s;
+
+}
+
+.video-review {
+  margin-top: 10px;
+}
+
+.video-card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.company-info {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid #e0e0e0;
+  position: absolute;
+  bottom: -20px;
+  left: calc(50% - 10px);
+}
+
+.video-review-card:hover {
+  border: 2px solid #007bff;
+  cursor: pointer;
+}
+
+.video-review-card:hover ~ .video-review-card {
+  animation-play-state: paused;
+}
+
+@keyframes video-slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+.video-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black color */
+  width: 60%;
+  max-width: 800px;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.video-popup-content {
+  position: relative;
+}
+
+.video-popup video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black color */
+  z-index: 9998;
+}
+</style>
+
+
+<div class="video-review-container">
+  <!-- Cards will be dynamically generated here -->
+  <!-- Example card -->
+  <div class="video-review-card">
+    <div class="video-card">
+      <video controls>
+        <source src="https://cdn.pixabay.com/vimeo/912684284/bird-200427.mp4?width=1280&hash=67fef5d5bd129d65e1bb235d5af18c429fd99732" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="video-review">
+      <h2>Ravi Sristav</h2>
+      <p>real estate business real estate business real estate business real estate business real estate business </p>
+    </div>
+    <div class="company-info">
+      <h3>DLF Corporation</h3>
+    </div>
+    <div class="arrow-down"></div>
+  </div>
+  <!-- End of example card -->
+
+      <!-- Example card -->
+  <div class="video-review-card">
+    <div class="video-card">
+      <video controls>
+        <source src="https://cdn.pixabay.com/vimeo/912684284/bird-200427.mp4?width=1280&hash=67fef5d5bd129d65e1bb235d5af18c429fd99732" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="video-review">
+      <h2>Title 1</h2>
+      <p>Description 1</p>
+    </div>
+    <div class="company-info">
+      <h3>Company Name 1</h3>
+    </div>
+    <div class="arrow-down"></div>
+  </div>
+  <!-- End of example card -->
+
+
+      <!-- Example card -->
+  <div class="video-review-card">
+    <div class="video-card">
+      <video controls>
+        <source src="https://cdn.pixabay.com/vimeo/912684284/bird-200427.mp4?width=1280&hash=67fef5d5bd129d65e1bb235d5af18c429fd99732" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="video-review">
+      <h2>Title 1</h2>
+      <p>Description 1</p>
+    </div>
+    <div class="company-info">
+      <h3>Company Name 1</h3>
+    </div>
+    <div class="arrow-down"></div>
+  </div>
+  <!-- End of example card -->
+
+
+      <!-- Example card -->
+  <div class="video-review-card">
+    <div class="video-card">
+      <video controls>
+        <source src="https://cdn.pixabay.com/vimeo/912684284/bird-200427.mp4?width=1280&hash=67fef5d5bd129d65e1bb235d5af18c429fd99732" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="video-review">
+      <h2>Title 1</h2>
+      <p>Description 1</p>
+    </div>
+    <div class="company-info">
+      <h3>Company Name 1</h3>
+    </div>
+    <div class="arrow-down"></div>
+  </div>
+  <!-- End of example card -->
+
+
+      <!-- Example card -->
+  <div class="video-review-card">
+    <div class="video-card">
+      <video controls>
+        <source src="https://cdn.pixabay.com/vimeo/912684284/bird-200427.mp4?width=1280&hash=67fef5d5bd129d65e1bb235d5af18c429fd99732" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="video-review">
+      <h2>Title 1</h2>
+      <p>Description 1</p>
+    </div>
+    <div class="company-info">
+      <h3>Company Name 1</h3>
+    </div>
+    <div class="arrow-down"></div>
+  </div>
+  <!-- End of example card -->
+
+      <!-- Example card -->
+  <div class="video-review-card">
+    <div class="video-card">
+      <video controls>
+        <source src="https://cdn.pixabay.com/vimeo/912684284/bird-200427.mp4?width=1280&hash=67fef5d5bd129d65e1bb235d5af18c429fd99732" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="video-review">
+      <h2>Title 1</h2>
+      <p>Description 1</p>
+    </div>
+    <div class="company-info">
+      <h3>Company Name 1</h3>
+    </div>
+    <div class="arrow-down"></div>
+  </div>
+  <!-- End of example card -->
+</div>
+
+<div class="video-popup">
+  <div class="video-popup-content">
+    <video controls></video>
+    <button class="close-popup">Close</button>
+  </div>
+</div>
+
+<div class="overlay"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const container = document.querySelector(".video-review-container");
+  const cards = document.querySelectorAll(".video-review-card");
+  const videoPopup = document.querySelector(".video-popup");
+  const closePopup = document.querySelector(".close-popup");
+  const popupVideo = document.querySelector(".video-popup video");
+  const overlay = document.querySelector('.overlay');
+
+  let totalWidth = 0;
+  cards.forEach(card => {
+    totalWidth += card.offsetWidth;
+  });
+
+  container.style.width = totalWidth + "px";
+
+  container.addEventListener("mouseenter", function() {
+    container.style.animationPlayState = "paused";
+  });
+
+  container.addEventListener("mouseleave", function() {
+    container.style.animationPlayState = "running";
+  });
+
+  const reviewCards = document.querySelectorAll(".video-card");
+
+  reviewCards.forEach(card => {
+    card.addEventListener("click", function() {
+      const videoSrc = card.querySelector("video source").getAttribute("src");
+      popupVideo.setAttribute("src", videoSrc);
+      videoPopup.style.display = "block";
+      overlay.style.display = "block";
+    });
+  });
+
+  closePopup.addEventListener("click", function() {
+    popupVideo.pause();
+    videoPopup.style.display = "none";
+    overlay.style.display = "none";
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Testimonials</h2>
+          <p>Step into the spotlight of success with testimonials that resonate.
+            Our clients' stories are more than words – they're vibrant tales of growth, achievement,
+            and partnership. Explore authentic experiences, where dreams met reality. Join a
+            community where satisfaction isn't just spoken; it's passionately shared. Your success story 
+            starts here.</p>
+        </div>
+
+        <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center">
+                    <img src="static/home/img/testimonials/aakansha.png" class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      <h3>Aakansha Mishra</h3>
+                      <h4>Ceo &amp; Founder</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Exceptional website design by this agency! They captured our brand essence perfectly, creating a visually
+                    stunning and user-friendly site. The logo design was equally impressive, reflecting our identity seamlessly.
+                    The agency's creative flair and attention to detail have truly set our digital presence apart.
+                    Highly recommend for anyone seeking top-tier website and logo design services!
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center">
+                    <img src="{% static 'home/img/testimonials/pankaj.png' %}" class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      <h3>Pankaj Singh</h3>
+                      <h4>Designer</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Exceptional website design! The agency captured our brand personality perfectly,
+                    delivering a site that is both visually appealing and easy to navigate. The logo design complemented the overall aesthetic beautifully. A seamless integration of design elements that has elevated our brand identity.
+                    We are delighted with the results and grateful for their creative expertise
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center">
+                    <img src="{% static 'home/img/testimonials/krishna.png' %}" class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      <h3>Krishna Dixit</h3>
+                      <h4>Freelancer</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Outstanding industrial services! This agency not only delivered on time but demonstrated a deep understanding of our unique requirements. The level of precision and efficiency displayed throughout the project was commendable.
+                    We are extremely satisfied with the results and will continue to partner with them for future industrial endeavors.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center">
+                    <img src="{% static 'home/img/testimonials/sumit.png' %}" class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      <h3>Sumit Saxena</h3>
+                      <h4>Real-Estate Developer</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    We are very satisfied with the new website Because of the pleasant and fast communication, the competitive
+                    prices and the thinking of Claire, we have chosen Grid Marketing to build our new website.
+                    We are very satisfied with the collaboration and the new website!
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center">
+                    <img src="static/home/img/testimonials/omkar.png" class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      <h3>Omkar Reddy</h3>
+                      <h4>Entrepreneur</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    .................is the best digital marketing agency in my opinion. Increased traffic and quality leads
+                    by more than 350% in the period of 6 months.  Absolutely pleased with ............
+                    and team for SEM, SEO, FB marketing. Better ROI than traditional marketing platforms.
+                    Much better than previous agencies/ freelancers that I worked with previously.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+
+
+
+
+
+
+
+
+
+
+<!--    &lt;!&ndash; ======= Portfolio Section ======= &ndash;&gt;-->
+<!--    <section id="portfolio" class="portfolio sections-bg">-->
+<!--      <div class="container" data-aos="fade-up">-->
+
+<!--        <div class="section-header">-->
+<!--          <h2>Portfolio</h2>-->
+<!--          <p>Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum nostrum enim velit qui ut et autem uia reprehenderit sunt deleniti</p>-->
+<!--        </div>-->
+
+<!--        <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">-->
+
+<!--          <div>-->
+<!--            <ul class="portfolio-flters">-->
+<!--              <li data-filter="*" class="filter-active">All</li>-->
+<!--              <li data-filter=".filter-app">App</li>-->
+<!--              <li data-filter=".filter-product">Product</li>-->
+<!--              <li data-filter=".filter-branding">Branding</li>-->
+<!--              <li data-filter=".filter-books">Books</li>-->
+<!--            </ul>&lt;!&ndash; End Portfolio Filters &ndash;&gt;-->
+<!--          </div>-->
+
+<!--          <div class="row gy-4 portfolio-container">-->
+
+<!--            <div class="col-xl-4 col-md-6 portfolio-item filter-app">-->
+<!--              <div class="portfolio-wrap">-->
+<!--                <a href="static/home/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/home/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>-->
+<!--                <div class="portfolio-info">-->
+<!--                  <h4><a href="portfolio-details.html" title="More Details">App 1</a></h4>-->
+<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
+
+<!--            <div class="col-xl-4 col-md-6 portfolio-item filter-product">-->
+<!--              <div class="portfolio-wrap">-->
+<!--                <a href="static/home/img/portfolio/product-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/home/img/portfolio/product-1.jpg" class="img-fluid" alt=""></a>-->
+<!--                <div class="portfolio-info">-->
+<!--                  <h4><a href="portfolio-details.html" title="More Details">Product 1</a></h4>-->
+<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
+
+<!--            <div class="col-xl-4 col-md-6 portfolio-item filter-branding">-->
+<!--              <div class="portfolio-wrap">-->
+<!--                <a href="static/home/img/portfolio/branding-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/home/img/portfolio/branding-1.jpg" class="img-fluid" alt=""></a>-->
+<!--                <div class="portfolio-info">-->
+<!--                  <h4><a href="portfolio-details.html" title="More Details">Branding 1</a></h4>-->
+<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
+
+<!--            <div class="col-xl-4 col-md-6 portfolio-item filter-books">-->
+<!--              <div class="portfolio-wrap">-->
+<!--                <a href="assets/img/portfolio/books-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/home/img/portfolio/books-1.jpg" class="img-fluid" alt=""></a>-->
+<!--                <div class="portfolio-info">-->
+<!--                  <h4><a href="portfolio-details.html" title="More Details">Books 1</a></h4>-->
+<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
+
+<!--            <div class="col-xl-4 col-md-6 portfolio-item filter-app">-->
+<!--              <div class="portfolio-wrap">-->
+<!--                <a href="assets/img/portfolio/app-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/home/img/portfolio/app-2.jpg" class="img-fluid" alt=""></a>-->
+<!--                <div class="portfolio-info">-->
+<!--                  <h4><a href="portfolio-details.html" title="More Details">App 2</a></h4>-->
+<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
+
+<!--            <div class="col-xl-4 col-md-6 portfolio-item filter-product">-->
+<!--              <div class="portfolio-wrap">-->
+<!--                <a href="assets/img/portfolio/product-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/home/img/portfolio/product-2.jpg" class="img-fluid" alt=""></a>-->
+<!--                <div class="portfolio-info">-->
+<!--                  <h4><a href="portfolio-details.html" title="More Details">Product 2</a></h4>-->
+<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
+
+<!--            <div class="col-xl-4 col-md-6 portfolio-item filter-branding">-->
+<!--              <div class="portfolio-wrap">-->
+<!--                <a href="assets/img/portfolio/branding-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/home/img/portfolio/branding-2.jpg" class="img-fluid" alt=""></a>-->
+<!--                <div class="portfolio-info">-->
+<!--                  <h4><a href="portfolio-details.html" title="More Details">Branding 2</a></h4>-->
+<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
+
+<!--            <div class="col-xl-4 col-md-6 portfolio-item filter-books">-->
+<!--              <div class="portfolio-wrap">-->
+<!--                <a href="assets/img/portfolio/books-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/home/img/portfolio/books-2.jpg" class="img-fluid" alt=""></a>-->
+<!--                <div class="portfolio-info">-->
+<!--                  <h4><a href="portfolio-details.html" title="More Details">Books 2</a></h4>-->
+<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
+
+<!--            <div class="col-xl-4 col-md-6 portfolio-item filter-app">-->
+<!--              <div class="portfolio-wrap">-->
+<!--                <a href="assets/img/portfolio/app-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/home/img/portfolio/app-3.jpg" class="img-fluid" alt=""></a>-->
+<!--                <div class="portfolio-info">-->
+<!--                  <h4><a href="portfolio-details.html" title="More Details">App 3</a></h4>-->
+<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
+
+<!--            <div class="col-xl-4 col-md-6 portfolio-item filter-product">-->
+<!--              <div class="portfolio-wrap">-->
+<!--                <a href="assets/img/portfolio/product-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/home/img/portfolio/product-3.jpg" class="img-fluid" alt=""></a>-->
+<!--                <div class="portfolio-info">-->
+<!--                  <h4><a href="portfolio-details.html" title="More Details">Product 3</a></h4>-->
+<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
+
+<!--            <div class="col-xl-4 col-md-6 portfolio-item filter-branding">-->
+<!--              <div class="portfolio-wrap">-->
+<!--                <a href="assets/img/portfolio/branding-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/home/img/portfolio/branding-3.jpg" class="img-fluid" alt=""></a>-->
+<!--                <div class="portfolio-info">-->
+<!--                  <h4><a href="portfolio-details.html" title="More Details">Branding 3</a></h4>-->
+<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
+
+<!--            <div class="col-xl-4 col-md-6 portfolio-item filter-books">-->
+<!--              <div class="portfolio-wrap">-->
+<!--                <a href="assets/img/portfolio/books-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/home/img/portfolio/books-3.jpg" class="img-fluid" alt=""></a>-->
+<!--                <div class="portfolio-info">-->
+<!--                  <h4><a href="portfolio-details.html" title="More Details">Books 3</a></h4>-->
+<!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
+
+<!--          </div>&lt;!&ndash; End Portfolio Container &ndash;&gt;-->
+
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </section>&lt;!&ndash; End Portfolio Section &ndash;&gt;-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ======= Our Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Our Team</h2>
+          <p>"Meet our proficient experts, each demonstrating excellence in their individual domains."</p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img src="static/home/img/team/shashi.png" class="img-fluid" alt="">
+              <h4>Shashi Shekhar</h4>
+              <span>Web/Software Developer</span>
+              <div class="social">
+                <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/shashi_shekhar_pathak/" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/shashi-shekhar-pathak-195382165/" target="_blank"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="static/home/img/team/rahul.png" class="img-fluid" alt="">
+              <h4>Rahul</h4>
+              <span>Marketing/SEO Expert</span>
+              <div class="social">
+                <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/rrahul007_/" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <img src="static/home/img/team/team-3.jpg" class="img-fluid" alt="">
+              <h4>Raushan</h4>
+              <span>Graphic Designer</span>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <img src="static/home/img/team/abhi.png" class="img-fluid" alt="">
+              <h4>Abhinandan Tiwari</h4>
+              <span>Developer</span>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+    </section><!-- End Our Team Section -->
+
+<!--    &lt;!&ndash; ======= Pricing Section ======= &ndash;&gt;-->
+<!--    <section id="pricing" class="pricing sections-bg">-->
+<!--      <div class="container" data-aos="fade-up">-->
+
+<!--        <div class="section-header">-->
+<!--          <h2>Pricing</h2>-->
+<!--          <p>Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat sunt id nobis omnis tiledo stran delop</p>-->
+<!--        </div>-->
+
+<!--        <div class="row g-4 py-lg-5" data-aos="zoom-out" data-aos-delay="100">-->
+
+<!--          <div class="col-lg-4">-->
+<!--            <div class="pricing-item">-->
+<!--              <h3>Content Writing</h3>-->
+<!--              <div class="icon">-->
+<!--                <i class="bi bi-box"></i>-->
+<!--              </div>-->
+<!--              <h4><sup>₹</sup>100<span> / Start Price</span></h4>-->
+<!--              <ul>-->
+<!--                <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>-->
+<!--                <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>-->
+<!--                <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>-->
+<!--                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>-->
+<!--                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>-->
+<!--              </ul>-->
+<!--              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>-->
+<!--            </div>-->
+<!--          </div>&lt;!&ndash; End Pricing Item &ndash;&gt;-->
+
+<!--          <div class="col-lg-4">-->
+<!--            <div class="pricing-item featured">-->
+<!--              <h3>Website Design</h3>-->
+<!--              <div class="icon">-->
+<!--                <i class="bi bi-airplane"></i>-->
+<!--              </div>-->
+
+<!--              <h4><sup>₹</sup>10000<span> / Start Price</span></h4>-->
+<!--              <ul>-->
+<!--                <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>-->
+<!--                <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>-->
+<!--                <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>-->
+<!--                <li><i class="bi bi-check"></i> Pharetra massa massa ultricies</li>-->
+<!--                <li><i class="bi bi-check"></i> Massa ultricies mi quis hendrerit</li>-->
+<!--              </ul>-->
+<!--              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>-->
+<!--            </div>-->
+<!--          </div>&lt;!&ndash; End Pricing Item &ndash;&gt;-->
+
+<!--          <div class="col-lg-4">-->
+<!--            <div class="pricing-item">-->
+<!--              <h3>Graphic Design</h3>-->
+<!--              <div class="icon">-->
+<!--                <i class="bi bi-send"></i>-->
+<!--              </div>-->
+<!--              <h4><sup>₹</sup>200<span> / design</span></h4>-->
+<!--              <ul>-->
+<!--                <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>-->
+<!--                <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>-->
+<!--                <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>-->
+<!--                <li><i class="bi bi-check"></i> Pharetra massa massa ultricies</li>-->
+<!--                <li><i class="bi bi-check"></i> Massa ultricies mi quis hendrerit</li>-->
+<!--              </ul>-->
+<!--              <div class="text-center"><a href="#" class="buy-btn">Reach Us</a></div>-->
+<!--            </div>-->
+<!--          </div>&lt;!&ndash; End Pricing Item &ndash;&gt;-->
+
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </section>&lt;!&ndash; End Pricing Section &ndash;&gt;-->
+
+
+
+
+<!--    &lt;!&ndash; ======= Frequently Asked Questions Section ======= &ndash;&gt;-->
+<!--    <section id="faq" class="faq">-->
+<!--      <div class="container" data-aos="fade-up">-->
+
+<!--        <div class="row gy-4">-->
+
+<!--          <div class="col-lg-4">-->
+<!--            <div class="content px-xl-5">-->
+<!--              <h3>Frequently Asked <strong>Questions</strong></h3>-->
+<!--              <p>-->
+<!--                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit-->
+<!--              </p>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-8">-->
+
+<!--            <div class="accordion accordion-flush" id="faqlist" data-aos="fade-up" data-aos-delay="100">-->
+
+<!--              <div class="accordion-item">-->
+<!--                <h3 class="accordion-header">-->
+<!--                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">-->
+<!--                    <span class="num">1.</span>-->
+<!--                    Non consectetur a erat nam at lectus urna duis?-->
+<!--                  </button>-->
+<!--                </h3>-->
+<!--                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">-->
+<!--                  <div class="accordion-body">-->
+<!--                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>&lt;!&ndash; # Faq item&ndash;&gt;-->
+
+<!--              <div class="accordion-item">-->
+<!--                <h3 class="accordion-header">-->
+<!--                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">-->
+<!--                    <span class="num">2.</span>-->
+<!--                    Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?-->
+<!--                  </button>-->
+<!--                </h3>-->
+<!--                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">-->
+<!--                  <div class="accordion-body">-->
+<!--                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>&lt;!&ndash; # Faq item&ndash;&gt;-->
+
+<!--              <div class="accordion-item">-->
+<!--                <h3 class="accordion-header">-->
+<!--                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">-->
+<!--                    <span class="num">3.</span>-->
+<!--                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?-->
+<!--                  </button>-->
+<!--                </h3>-->
+<!--                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">-->
+<!--                  <div class="accordion-body">-->
+<!--                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>&lt;!&ndash; # Faq item&ndash;&gt;-->
+
+<!--              <div class="accordion-item">-->
+<!--                <h3 class="accordion-header">-->
+<!--                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">-->
+<!--                    <span class="num">4.</span>-->
+<!--                    Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?-->
+<!--                  </button>-->
+<!--                </h3>-->
+<!--                <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">-->
+<!--                  <div class="accordion-body">-->
+<!--                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>&lt;!&ndash; # Faq item&ndash;&gt;-->
+
+<!--              <div class="accordion-item">-->
+<!--                <h3 class="accordion-header">-->
+<!--                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">-->
+<!--                    <span class="num">5.</span>-->
+<!--                    Tempus quam pellentesque nec nam aliquam sem et tortor consequat?-->
+<!--                  </button>-->
+<!--                </h3>-->
+<!--                <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">-->
+<!--                  <div class="accordion-body">-->
+<!--                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>&lt;!&ndash; # Faq item&ndash;&gt;-->
+
+<!--            </div>-->
+
+<!--          </div>-->
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </section>&lt;!&ndash; End Frequently Asked Questions Section &ndash;&gt;-->
+
+<!--    -->
+<!--    -->
+<!--    -->
+<!--    -->
+<!--    &lt;!&ndash; ======= Recent Blog Posts Section ======= &ndash;&gt;-->
+<!--    <section id="recent-posts" class="recent-posts sections-bg">-->
+<!--      <div class="container" data-aos="fade-up">-->
+
+<!--        <div class="section-header">-->
+<!--          <h2>Recent Blog Posts</h2>-->
+<!--          <p>Consequatur libero assumenda est voluptatem est quidem illum et officia imilique qui vel architecto accusamus fugit aut qui distinctio</p>-->
+<!--        </div>-->
+
+<!--        <div class="row gy-4">-->
+
+<!--          <div class="col-xl-4 col-md-6">-->
+<!--            <article>-->
+
+<!--              <div class="post-img">-->
+<!--                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">-->
+<!--              </div>-->
+
+<!--              <p class="post-category">Politics</p>-->
+
+<!--              <h2 class="title">-->
+<!--                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>-->
+<!--              </h2>-->
+
+<!--              <div class="d-flex align-items-center">-->
+<!--                <img src="assets/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">-->
+<!--                <div class="post-meta">-->
+<!--                  <p class="post-author">Maria Doe</p>-->
+<!--                  <p class="post-date">-->
+<!--                    <time datetime="2022-01-01">Jan 1, 2022</time>-->
+<!--                  </p>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--            </article>-->
+<!--          </div>&lt;!&ndash; End post list item &ndash;&gt;-->
+
+<!--          <div class="col-xl-4 col-md-6">-->
+<!--            <article>-->
+
+<!--              <div class="post-img">-->
+<!--                <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">-->
+<!--              </div>-->
+
+<!--              <p class="post-category">Sports</p>-->
+
+<!--              <h2 class="title">-->
+<!--                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>-->
+<!--              </h2>-->
+
+<!--              <div class="d-flex align-items-center">-->
+<!--                <img src="assets/img/blog/blog-author-2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">-->
+<!--                <div class="post-meta">-->
+<!--                  <p class="post-author">Allisa Mayer</p>-->
+<!--                  <p class="post-date">-->
+<!--                    <time datetime="2022-01-01">Jun 5, 2022</time>-->
+<!--                  </p>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--            </article>-->
+<!--          </div>&lt;!&ndash; End post list item &ndash;&gt;-->
+
+<!--          <div class="col-xl-4 col-md-6">-->
+<!--            <article>-->
+
+<!--              <div class="post-img">-->
+<!--                <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">-->
+<!--              </div>-->
+
+<!--              <p class="post-category">Entertainment</p>-->
+
+<!--              <h2 class="title">-->
+<!--                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>-->
+<!--              </h2>-->
+
+<!--              <div class="d-flex align-items-center">-->
+<!--                <img src="assets/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">-->
+<!--                <div class="post-meta">-->
+<!--                  <p class="post-author">Mark Dower</p>-->
+<!--                  <p class="post-date">-->
+<!--                    <time datetime="2022-01-01">Jun 22, 2022</time>-->
+<!--                  </p>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--            </article>-->
+<!--          </div>&lt;!&ndash; End post list item &ndash;&gt;-->
+
+<!--        </div>&lt;!&ndash; End recent posts list &ndash;&gt;-->
+
+<!--      </div>-->
+<!--    </section>&lt;!&ndash; End Recent Blog Posts Section &ndash;&gt;-->
+
+<!--    -->
+<!--    -->
+<!--    -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing">
+      <div class="container">
+
+        <div class="section-header" data-aos="zoom-out">
+          <h2>Pricing</h2>
+          <p>Unveil the simplicity of success with our pricing. No hidden fees, just clear value.
+            Tailor your plan to match your ambitions, as we believe in affordability without compromise.
+            Choose a pricing structure that grows with you. Your journey to excellence starts with transparent,
+            flexible, and fair pricing. Elevate your investment wisely.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="box" data-aos="zoom-in">
+              <h3>Content Writing</h3>
+              <h4><sup>₹</sup>100<span> / Starting Price</span></h4>
+              <ul>
+                <li>Engaging Content</li>
+                <li>Understand Your Audience</li>
+                <li>Understand the Brand Voice</li>
+                <li>Well-Researched Content</li>
+                <li> Authentic and Original Content</li>
+<!--                <li class="na">Pharetra massa</li>-->
+<!--                <li class="na">Massa ultricies mi</li>-->
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Reach Us</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+            <div class="box featured" data-aos="zoom-in" data-aos-delay="100">
+              <h3>Website Design</h3>
+              <h4><sup>₹</sup>10000<span> / Starting Price</span></h4>
+              <ul>
+                <li>User-Friendly Interface</li>
+                <li>Robust Performance</li>
+                <li>Mobile-Friendly Design</li>
+                <li>Fast Loading Speed</li>
+                <li>Dependable Hosting Choice</li>
+<!--                <li class="na">Massa ultricies mi</li>-->
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="200">
+              <h3>Search Engine Optimization</h3>
+              <h4><sup>₹</sup>5000<span> / Starting Price</span></h4>
+              <ul>
+                <li>Boost Website Visibility</li>
+                <li>Relevant Keywords</li>
+                <li>Utilize SEO Tools</li>
+                <li>Implement Local SEO</li>
+                <li>Create Sitemaps</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="300">
+              <span class="advanced">Professional</span>
+              <h3>Graphic Design</h3>
+              <h4><sup>₹</sup>200<span> / Starting Price</span></h4>
+              <ul>
+                <li>Eye-Catching Designs</li>
+                <li>Professional Logo Designs</li>
+                <li>Effective Use of Colors</li>
+                <li>Versatile Graphics</li>
+                <li>Effective Storytelling through Visuals</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
+
+
+<style>
+.pricing .box {
+  padding: 20px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing h3 {
+  font-weight: 400;
+  margin: -20px -20px 25px -20px;
+  padding: 30px 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #777777;
+  background: #f8f8f8;
+}
+
+.pricing h4 {
+  font-size: 36px;
+  color: #ef6603;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+}
+
+.pricing h4 sup {
+  font-size: 20px;
+  top: -15px;
+  left: -3px;
+}
+
+.pricing h4 span {
+  color: #bababa;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.pricing ul {
+  padding: 0;
+  list-style: none;
+  color: #444444;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.pricing ul li {
+  padding-bottom: 16px;
+}
+
+.pricing ul i {
+  color: #ef6603;
+  font-size: 18px;
+  padding-right: 4px;
+}
+
+.pricing ul .na {
+  color: #ccc;
+  text-decoration: line-through;
+}
+
+.pricing .btn-wrap {
+  margin: 20px -20px -20px -20px;
+  padding: 20px 15px;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.pricing .btn-buy {
+  background: #ef6603;
+  display: inline-block;
+  padding: 8px 35px 10px 35px;
+  border-radius: 50px;
+  color: #fff;
+  transition: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.pricing .btn-buy:hover {
+  background: #fc8129;
+}
+
+.pricing .featured {
+  border: 2px solid #ef6603;
+}
+
+.pricing .featured h3 {
+  color: #fff;
+  background: #ef6603;
+}
+
+.pricing .advanced {
+  width: 200px;
+  position: absolute;
+  top: 18px;
+  right: -68px;
+  transform: rotate(45deg);
+  z-index: 1;
+  font-size: 14px;
+  padding: 1px 0 3px 0;
+  background: #ef6603;
+  color: #fff;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ======= About Us Section ======= -->
+    <section id="about2">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Why Are We Awesome?</h2>
+          <p style="font-style: italic;">Pheonix Marketing Agency, where digital brilliance meets unparalleled innovation.
+            As your dedicated digital marketing partner, we bring a blend of professionalism and creativity to amplify your brand's
+            online presence.
+            At Pheonix Marketing Agency, we are not just a service provider; we are architects of digital success.</p>
+        </div>
+
+        <div class="row about-cols">
+
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="about-col">
+              <div class="img">
+                <img src="https://img.freepik.com/premium-vector/business-plan-concept-illustration-business-people-using-devices-remote-working-professional-growth_178888-49.jpg?w=1060" alt="" class="img-fluid">
+                <div class="icon"><i class="bi bi-brightness-high"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Plan</a></h2>
+              <p>
+                "Crafting digital brilliance through design, development, and strategy. We catapult brands into the limelight with compelling visuals, strategic content,
+                and powerful online engagement."
+              </p>
+            </div>
+          </div>
+
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-col">
+              <div class="img">
+                <img src="static/home/img/target.png" alt="" class="img-fluid">
+                <div class="icon"><i class="bi bi-bar-chart"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Mission</a></h2>
+              <p>
+               "Empower businesses to soar in the digital era. As your catalyst for success, we merge innovation with expertise,
+                fostering a digital legacy through dynamic solutions and strategic partnerships."
+              </p>
+            </div>
+          </div>
+
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="about-col">
+              <div class="img">
+                <img src="static/home/img/vision.png" alt="" class="img-fluid">
+                <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Vision</a></h2>
+              <p>
+                "See your brand soar. We envision a digital landscape where your uniqueness shines,
+                captivating audiences worldwide. Join us on this journey to redefine digital excellence."
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+
+
+ <style>
+/* About Us Section
+--------------------------------*/
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "semibold", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+#about2 {
+   /*background: url("static/home/img/about-bg.jpg") center top no-repeat fixed;*/
+  background: url("static/home/img/video21.mp4") ;
+  background-size: cover;
+  padding: 60px 0 40px 0;
+  position: relative;
+}
+
+
+
+#about2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.92);
+  z-index: 9;
+}
+
+#about2 .container {
+  position: relative;
+  z-index: 10;
+
+}
+
+#about2 .about-col {
+  background: #fff;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+
+}
+
+#about2 .about-col .img {
+  position: relative;
+
+}
+
+#about2 .about-col .img img {
+  border-radius: 4px 4px 0 0;
+}
+
+#about2 .about-col .icon {
+  width: 64px;
+  height: 64px;
+  text-align: center;
+  position: absolute;
+  background-color: #f85a40;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  left: calc(50% - 32px);
+  bottom: -30px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about2 .about-col i {
+  font-size: 28px;
+  line-height: 0;
+  color: #fff;
+  transition: 0.3s;
+}
+
+#about2 .about-col:hover .icon {
+  background-color: #fff;
+}
+
+#about2 .about-col:hover i {
+  color: #f85a40;
+}
+
+#about2 .about-col h2 {
+  color: #000;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0;
+  margin: 40px 0 12px 0;
+}
+
+#about2 .about-col h2 a {
+  color: #000;
+}
+
+#about2 .about-col h2 a:hover {
+  color: #f85a40;
+}
+
+#about2 .about-col p {
+  font-size: 16px;
+  font-family:"Segoe UI";
+  font-style: italic;
+  line-height: 24px;
+  color: black;
+  margin-bottom: 0;
+  padding: 0 20px 20px 20px;
+}
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Let's Talk Digital!</h2>
+          <p>From Conversation to Creation: Let's Talk Digital Inspires Change.</p>
+        </div>
+
+        {% include 'home/form-submission-message.html' %}
+
+        <div class="row gx-lg-0 gy-4">
+
+          <div class="col-lg-4">
+
+            <div class="info-container d-flex flex-column align-items-center justify-content-center">
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h4>Location:</h4>
+                  <p>Zencity Campus, Electronic City Phase II, Bangalore, India 560100 </p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h4>Email:</h4>
+                  <p>info@example.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-phone flex-shrink-0"></i>
+                <div>
+                  <h4>Call:</h4>
+                  <p>+1 5589 55488 55</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-clock flex-shrink-0"></i>
+                <div>
+                  <h4>Open Hours:</h4>
+                  <p>Mon-Sun: 11AM - 23PM</p>
+                </div>
+              </div><!-- End Info Item -->
+            </div>
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="{% url 'home' %}" role="form" class="php-email-form" method="post"> {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  {{ form.full_name.errors }}
+                  {{form.full_name|as_crispy_field}}
+<!--                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>-->
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                     {{ form.email.errors }}
+                     {{form.email|as_crispy_field}}
+<!--                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>-->
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                {{ form.contact_number.errors }}
+                {{form.contact_number|as_crispy_field}}
+<!--                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>-->
+              </div>
+              <div class="form-group mt-3">
+                {{ form.message.errors }}
+                {{form.message|as_crispy_field}}
+<!--                <textarea class="form-control" name="message" rows="7" placeholder="Message" required></textarea>-->
+              </div>
+<!--              <div class="my-3">-->
+<!--                <div class="loading">Loading</div>-->
+<!--                <div class="error-message"></div>-->
+<!--                <div class="sent-message">Your message has been sent. Thank you!</div>-->
+<!--              </div>-->
+               <div class="text-center">
+                <button type="submit" class="btn btn-outline-secondary" style="background-color:#FF512F; color: white">Send Message</button>
+             </div>
+<!--              <div class="text-center"><button type="submit">Send Message</button></div>-->
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+
+
+
+
+
+
+
+
+
+  </main><!-- End #main -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  &lt;!&ndash; ======= Footer ======= &ndash;&gt;-->
+<!--  <footer id="footer" class="footer";>-->
+
+<!--    <div class="container">-->
+<!--      <div class="row gy-4">-->
+<!--        <div class="col-lg-5 col-md-12 footer-info">-->
+<!--          <a href="index.html" class="logo d-flex align-items-center">-->
+<!--            <span>XpertWe</span>-->
+<!--          </a>-->
+<!--          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>-->
+<!--          <div class="social-links d-flex mt-4">-->
+<!--            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>-->
+<!--            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>-->
+<!--            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>-->
+<!--            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-lg-2 col-6 footer-links">-->
+<!--          <h4>Useful Links</h4>-->
+<!--          <ul>-->
+<!--            <li><a href="#">Home</a></li>-->
+<!--            <li><a href="#">About us</a></li>-->
+<!--            <li><a href="#">Services</a></li>-->
+<!--            <li><a href="#">Terms of service</a></li>-->
+<!--            <li><a href="#">Privacy policy</a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
+
+<!--        <div class="col-lg-2 col-6 footer-links">-->
+<!--          <h4>Our Services</h4>-->
+<!--          <ul>-->
+<!--            <li><a href="#">Web Design</a></li>-->
+<!--            <li><a href="#">Web Development</a></li>-->
+<!--            <li><a href="#">Product Management</a></li>-->
+<!--            <li><a href="#">Marketing</a></li>-->
+<!--            <li><a href="#">Graphic Design</a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
+
+<!--        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">-->
+<!--          <h4>Contact Us</h4>-->
+<!--          <p>-->
+<!--            Zencity Campus <br>-->
+<!--            Electronic City Phase II, Bangalore 560100<br>-->
+<!--            India <br><br>-->
+<!--            <strong>Phone:</strong> +91-8248060838<br>-->
+<!--            <strong>Email:</strong> info@example.com<br>-->
+<!--          </p>-->
+
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="container mt-4">-->
+<!--      <div class="copyright">-->
+<!--        &copy; Copyright <strong><span>XpertWe</span></strong>. All Rights Reserved-->
+<!--      </div>-->
+<!--      <div class="credits">-->
+<!--        &lt;!&ndash; All the links in the footer should remain intact. &ndash;&gt;-->
+<!--        &lt;!&ndash; You can delete the links only if you purchased the pro version. &ndash;&gt;-->
+<!--        &lt;!&ndash; Licensing information: https://bootstrapmade.com/license/ &ndash;&gt;-->
+<!--        &lt;!&ndash; Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/impact-bootstrap-business-website-template/ &ndash;&gt;-->
+<!--&lt;!&ndash;        Designed by <a  href="https://bootstrapmade.com/">XpertWe</a>&ndash;&gt;-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--  </footer>&lt;!&ndash; End Footer &ndash;&gt;-->
+<!--  &lt;!&ndash; End Footer &ndash;&gt;-->
+
+
+
+
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+
+  <script src='{% static "home/vendor/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
+  <script src='{% static "home/vendor/aos/aos.js" %}'></script>
+  <script src='{% static "home/vendor/glightbox/js/glightbox.min.js" %}'></script>
+  <script src='{% static "home/vendor/purecounter/purecounter_vanilla.js" %}'></script>
+  <script src='{% static "home/vendor/swiper/swiper-bundle.min.js" %}'></script>
+  <script src='{% static "home/vendor/isotope-layout/isotope.pkgd.min.js" %}'></script>
+<!--  <script src='{% static "home/vendor/php-email-form/validate.js" %}'></script>-->
+
+
+  <!-- Template Main JS File -->
+   <script src='{% static "home/js/main.js" %}'></script>
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+<!-- {% endfor %} -->
+
+
+{% endblock %}
